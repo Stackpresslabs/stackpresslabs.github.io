@@ -3,84 +3,126 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>StackPress Labs – Smarter Budgeting Starts Here</title>
+  <title>StackPress Labs – Budget Smarter in 2025</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Top budgeting tools, tips, and comparisons to help you take control of your finances in 2025 and beyond.">
+  <meta name="description" content="Explore top budgeting tools, comparisons, and tips powered by AI – built for smart spenders in 2025.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ089NNNXT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NQ089NNNXT');
-</script>
-
-  
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1769932877287341');
-  fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1769932877287341&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ089NNNXT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NQ089NNNXT');
+  </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1769932877287341');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1769932877287341&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: #f9fbfd;
-      color: #1a1a2e;
+      background: #f8fafc;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
+      color: #1f2937;
+    }
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1rem;
+      margin: 0;
     }
     main {
-      max-width: 800px;
+      max-width: 960px;
       margin: 2rem auto;
+      padding: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media(min-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .card {
       background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    .card:hover {
+      transform: translateY(-4px);
     }
-    p {
-      line-height: 1.6;
-      margin-bottom: 1rem;
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
     }
-    a.cta {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #0077cc;
-      color: white;
-      border-radius: 6px;
+    .card p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .card a {
       text-decoration: none;
       font-weight: 600;
-    }
-    a.cta:hover {
-      background: #005fa3;
+      color: #2563eb;
     }
   </style>
 </head>
 <body>
-<main>
-  <h1>Welcome to StackPress Labs</h1>
-  <p>Your source for smarter budgeting, better tools, and AI-powered financial strategies in 2025 and beyond.</p>
-  <a href="blog.html" class="cta">Read the Latest Blog Posts</a>
-</main>
+  <header>
+    <h1>Welcome to StackPress Labs</h1>
+    <p>Your AI-powered guide to smarter budgeting in 2025</p>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <h2>🔍 Best Budgeting Apps</h2>
+        <p>Compare beginner-friendly tools like YNAB, Monarch, and more.</p>
+        <a href="best-apps.html">View Guide →</a>
+      </div>
+      <div class="card">
+        <h2>📘 Blog Library</h2>
+        <p>Read our latest AI-written guides on saving, spending, and staying on track.</p>
+        <a href="blog.html">Browse Posts →</a>
+      </div>
+      <div class="card">
+        <h2>📊 Budget Tools by Category</h2>
+        <p>Explore apps for students, families, side hustlers, and more.</p>
+        <a href="tools.html">See Categories →</a>
+      </div>
+      <div class="card">
+        <h2>🚀 Coming Soon: Credit Hacks AI</h2>
+        <p>Boost your credit score with automated tracking and reporting tips.</p>
+        <a href="#">Join Early List →</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
