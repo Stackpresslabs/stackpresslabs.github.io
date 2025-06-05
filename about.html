@@ -1,45 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About StackPress Labs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Learn more about StackPress Labs – who we are and why we build affiliate-powered content systems.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; margin: 0; background: #f4f7fa; color: #333; }
-        header { background: #1a1a2e; color: white; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        header img { height: 40px; border-radius: 50%; }
-        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
-        main { padding: 2rem; background: white; max-width: 800px; margin: 2rem auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        h1 { color: #1a1a2e; }
-        footer { text-align: center; padding: 2rem; background: #eee; font-size: 0.9rem; color: #666; margin-top: 2rem; }
-    </style>
+  <meta charset="UTF-8">
+  <title>About – StackPress Labs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About – StackPress Labs">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ089NNNXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NQ089NNNXT');
+</script>
+
+  
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1769932877287341');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1769932877287341&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+  
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1f2937;
+  }
+  header {
+    background: #0f172a;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  .card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .card a {
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6b7280;
+    padding: 2rem 0;
+  }
+</style>
+
 </head>
 <body>
-
-<header>
-    <img src="logo.png" alt="StackPress Logo">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="best-apps.html">Apps</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
-
-<main>
+  <header>
     <h1>About StackPress Labs</h1>
-    <p><strong>StackPress Labs</strong> is an independent publishing initiative that builds high-performance affiliate content microsites using the power of AI and automation.</p>
-    <p>We specialize in niches that help people solve real-world problems — from budgeting and credit building to online learning and self-development. Our sites are optimized for SEO, user experience, and monetization through trusted partner programs.</p>
-    <p>Our mission is simple: help users make better decisions through content that’s fast, clear, and useful — all while operating lean and automated in the background.</p>
-    <p>We are not a traditional company. We are a stack — of systems, strategies, and scalable ideas.</p>
-</main>
-
-<footer>
-    &copy; 2025 StackPress Labs. All rights reserved.
-</footer>
-
+    <p>Helping people master their money with AI.</p>
+  </header>
+  <main>
+    <div class="grid">
+      <div class='card'><h2>Who We Are</h2><p>AI meets financial literacy.</p><a href='#'>Learn more →</a></div><div class='card'><h2>Why Budgeting Matters</h2><p>Debt-free living in the digital age.</p><a href='#'>Learn more →</a></div><div class='card'><h2>Our Tech Stack</h2><p>OpenAI + GitHub + automation.</p><a href='#'>Learn more →</a></div>
+    </div>
+  </main>
+  <footer>&copy; 2025 StackPress Labs • Built with AI</footer>
 </body>
 </html>

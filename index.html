@@ -1,128 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>StackPress Labs – Budget Smarter in 2025</title>
+  <title>StackPress Labs – Smarter Budgeting with AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore top budgeting tools, comparisons, and tips powered by AI – built for smart spenders in 2025.">
+  <meta name="description" content="StackPress Labs – Smarter Budgeting with AI">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ089NNNXT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NQ089NNNXT');
-  </script>
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1769932877287341');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1769932877287341&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f8fafc;
-      margin: 0;
-      padding: 0;
-      color: #1f2937;
-    }
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1rem;
-      margin: 0;
-    }
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    @media(min-width: 600px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.25rem;
-    }
-    .card p {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-    }
-    .card a {
-      text-decoration: none;
-      font-weight: 600;
-      color: #2563eb;
-    }
-  </style>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NQ089NNNXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NQ089NNNXT');
+</script>
+
+  
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1769932877287341');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1769932877287341&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+  
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #1f2937;
+  }
+  header {
+    background: #0f172a;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem;
+  }
+  header p {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  .card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .card a {
+    font-weight: bold;
+    color: #2563eb;
+    text-decoration: none;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6b7280;
+    padding: 2rem 0;
+  }
+</style>
+
 </head>
 <body>
   <header>
-    <h1>Welcome to StackPress Labs</h1>
-    <p>Your AI-powered guide to smarter budgeting in 2025</p>
+    <h1>StackPress Labs</h1>
+    <p>AI-powered content for smarter personal finance in 2025.</p>
   </header>
   <main>
     <div class="grid">
-      <div class="card">
-        <h2>🔍 Best Budgeting Apps</h2>
-        <p>Compare beginner-friendly tools like YNAB, Monarch, and more.</p>
-        <a href="best-apps.html">View Guide →</a>
-      </div>
-      <div class="card">
-        <h2>📘 Blog Library</h2>
-        <p>Read our latest AI-written guides on saving, spending, and staying on track.</p>
-        <a href="blog.html">Browse Posts →</a>
-      </div>
-      <div class="card">
-        <h2>📊 Budget Tools by Category</h2>
-        <p>Explore apps for students, families, side hustlers, and more.</p>
-        <a href="tools.html">See Categories →</a>
-      </div>
-      <div class="card">
-        <h2>🚀 Coming Soon: Credit Hacks AI</h2>
-        <p>Boost your credit score with automated tracking and reporting tips.</p>
-        <a href="#">Join Early List →</a>
-      </div>
+      <div class='card'><h2>📘 Blog Library</h2><p>Read our latest AI-written budgeting posts.</p><a href='blog.html'>Learn more →</a></div><div class='card'><h2>📱 Best Budgeting Apps</h2><p>Top picks for apps that actually work in 2025.</p><a href='best-apps.html'>Learn more →</a></div><div class='card'><h2>📊 Budgeting by Category</h2><p>Explore tools for students, freelancers, and more.</p><a href='tools.html'>Learn more →</a></div><div class='card'><h2>🔐 About StackPress</h2><p>Our mission, technology and community.</p><a href='about.html'>Learn more →</a></div><div class='card'><h2>✉️ Contact Us</h2><p>Reach out for collabs or questions.</p><a href='contact.html'>Learn more →</a></div>
     </div>
   </main>
+  <footer>&copy; 2025 StackPress Labs • Built with AI</footer>
 </body>
 </html>
