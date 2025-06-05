@@ -1,0 +1,30 @@
+name: Auto Blog Post Generator
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # Every day at noon UTC
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run blog generator script
+        run: |
+          python auto_blog.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "StackPress Bot"
+          git config --global user.email "bot@stackpresslabs.com"
+          git add .
+          git commit -m "Automated blog post update"
+          git push
