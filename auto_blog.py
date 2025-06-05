@@ -1,12 +1,11 @@
 
 # auto_blog.py
-# 🔄 StackPress Auto Blog Generator
-# This script picks a blog idea, generates an HTML file, and updates blog.html.
+# 📄 StackPress Styled Blog Generator
 
 import os
 from datetime import datetime
 
-# Step 1: Define some example blog posts
+# Define example blog posts
 blog_posts = [
     {
         "title": "How to Start Budgeting on a Low Income",
@@ -25,40 +24,69 @@ blog_posts = [
     }
 ]
 
-# Step 2: Pick one based on the day (rotate posts daily)
+# Rotate based on date
 index = datetime.now().day % len(blog_posts)
 post = blog_posts[index]
 
-# Step 3: Generate HTML content using post data
+# Generate fully styled HTML
 html = f"""<!DOCTYPE html>
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
     <title>{post['title']}</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='AI-powered blog post on budgeting'>
     <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet'>
     <style>
-        body {{ font-family: 'Inter', sans-serif; background: #f9fbfd; color: #1a1a2e; padding: 2rem; }}
-        main {{ max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 0 12px rgba(0,0,0,0.05); }}
-        h1 {{ color: #1a1a2e; }}
+        body {{
+            font-family: 'Inter', sans-serif;
+            background: #f9fbfd;
+            color: #1a1a2e;
+            margin: 0;
+            padding: 2rem;
+        }}
+        main {{
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }}
+        h1 {{
+            font-size: 1.8rem;
+            color: #1a1a2e;
+        }}
+        p {{
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }}
+        a {{
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: 600;
+        }}
+        a:hover {{
+            text-decoration: underline;
+        }}
     </style>
 </head>
 <body>
 <main>
     <h1>{post['title']}</h1>
     <p>{post['content']}</p>
-    <p><a href='/best-apps.html'>Compare budgeting apps →</a></p>
+    <p><a href='/best-apps.html'>Compare the best budgeting tools →</a></p>
 </main>
 </body>
 </html>"""
 
-# Step 4: Save post as a new HTML file
+# Save to blog post file
 filename = f"blog-post-{post['slug']}.html"
 with open(filename, "w") as f:
     f.write(html)
-print(f"✅ Created blog file: {filename}")
+print(f"✅ Created styled blog file: {filename}")
 
-# Step 5: Append a link to blog.html (skip if already exists)
+# Append link to blog.html if not already included
 link_line = f"<li><a href='{filename}'>{post['title']}</a></li>\n"
 
 if os.path.exists("blog.html"):
