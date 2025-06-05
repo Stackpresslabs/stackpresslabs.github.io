@@ -1,11 +1,11 @@
 
 # auto_blog.py
-# 📄 StackPress Styled Blog Generator
+# 📄 StackPress Clean Blog Generator (safe append inside <ul>)
 
 import os
 from datetime import datetime
 
-# Define example blog posts
+# Define blog posts
 blog_posts = [
     {
         "title": "How to Start Budgeting on a Low Income",
@@ -24,18 +24,18 @@ blog_posts = [
     }
 ]
 
-# Rotate based on date
+# Rotate post by day
 index = datetime.now().day % len(blog_posts)
 post = blog_posts[index]
 
-# Generate fully styled HTML
+# Create styled HTML
 html = f"""<!DOCTYPE html>
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
     <title>{post['title']}</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta name='description' content='AI-powered blog post on budgeting'>
+    <meta name='description' content='{post['title']} - AI-generated blog post by StackPress Labs'>
     <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet'>
     <style>
         body {{
@@ -80,24 +80,31 @@ html = f"""<!DOCTYPE html>
 </body>
 </html>"""
 
-# Save to blog post file
+# Write blog post to HTML file
 filename = f"blog-post-{post['slug']}.html"
 with open(filename, "w") as f:
     f.write(html)
 print(f"✅ Created styled blog file: {filename}")
 
-# Append link to blog.html if not already included
+# Safe insert into <ul> in blog.html
 link_line = f"<li><a href='{filename}'>{post['title']}</a></li>\n"
 
 if os.path.exists("blog.html"):
     with open("blog.html", "r") as bf:
-        current_content = bf.read()
+        content = bf.readlines()
 
-    if post['title'] not in current_content:
-        with open("blog.html", "a") as bf:
-            bf.write(link_line)
-        print("✅ Link added to blog.html")
+    if post['title'] not in "".join(content):
+        new_content = []
+        inserted = False
+        for line in content:
+            new_content.append(line)
+            if "<ul>" in line and not inserted:
+                new_content.append(link_line)
+                inserted = True
+        with open("blog.html", "w") as bf:
+            bf.writelines(new_content)
+        print("✅ Link inserted inside <ul> in blog.html")
     else:
-        print("ℹ️ Blog post already exists in blog.html")
+        print("ℹ️ Post already listed in blog.html")
 else:
-    print("⚠️ blog.html not found in the repo root. Make sure it's uploaded.")
+    print("⚠️ blog.html not found in repo root.")
