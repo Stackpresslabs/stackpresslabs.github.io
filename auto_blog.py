@@ -1,8 +1,12 @@
 
+# auto_blog.py
+# 🔄 StackPress Auto Blog Generator
+# This script picks a blog idea, generates an HTML file, and updates blog.html.
+
 import os
 from datetime import datetime
 
-# Define a list of example blog titles and content
+# Step 1: Define some example blog posts
 blog_posts = [
     {
         "title": "How to Start Budgeting on a Low Income",
@@ -21,11 +25,11 @@ blog_posts = [
     }
 ]
 
-# Pick post by day of the month
+# Step 2: Pick one based on the day (rotate posts daily)
 index = datetime.now().day % len(blog_posts)
 post = blog_posts[index]
 
-# Generate HTML content
+# Step 3: Generate HTML content using post data
 html = f"""<!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -48,13 +52,24 @@ html = f"""<!DOCTYPE html>
 </body>
 </html>"""
 
-# Save to file
+# Step 4: Save post as a new HTML file
 filename = f"blog-post-{post['slug']}.html"
 with open(filename, "w") as f:
     f.write(html)
+print(f"✅ Created blog file: {filename}")
 
-# Append link to blog.html (naive append, ideally would use HTML parsing)
-blog_link = f"<li><a href='{filename}'>{post['title']}</a></li>\n"
+# Step 5: Append a link to blog.html (skip if already exists)
+link_line = f"<li><a href='{filename}'>{post['title']}</a></li>\n"
 
-with open("blog.html", "a") as blogfile:
-    blogfile.write(blog_link)
+if os.path.exists("blog.html"):
+    with open("blog.html", "r") as bf:
+        current_content = bf.read()
+
+    if post['title'] not in current_content:
+        with open("blog.html", "a") as bf:
+            bf.write(link_line)
+        print("✅ Link added to blog.html")
+    else:
+        print("ℹ️ Blog post already exists in blog.html")
+else:
+    print("⚠️ blog.html not found in the repo root. Make sure it's uploaded.")
