@@ -3,28 +3,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>StackPress Labs – Budget Smarter</title>
+    <title>StackPress Labs – Smarter Budgeting Starts Here</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Discover the top budgeting tools that help you save smarter, automate your finances, and reach your goals.">
+    <meta name="description" content="Top budgeting tools, tips, and comparisons to help you take control of your finances in 2025 and beyond.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        * { box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fa;
-            color: #333;
+            background-color: #f9fbfd;
+            color: #1a1a2e;
         }
         header {
-            background: #1a1a2e;
+            background: #121e2c;
             color: white;
-            padding: 1.5rem 2rem;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         header img {
-            height: 40px;
+            height: 42px;
             border-radius: 50%;
         }
         nav a {
@@ -32,36 +34,60 @@
             margin-left: 20px;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #00ccff;
         }
         .hero {
+            background: linear-gradient(to right, #0077cc, #00b7e8);
+            color: white;
+            padding: 4rem 2rem;
             text-align: center;
-            padding: 3rem 2rem;
-            background: white;
         }
         .hero h1 {
-            font-size: 2.5rem;
-            color: #1a1a2e;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
         }
         .hero p {
-            max-width: 600px;
-            margin: 1rem auto;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
         }
         .cta-btn {
-            background: #0077cc;
-            color: white;
+            background: white;
+            color: #0077cc;
             border: none;
             padding: 1rem 2rem;
-            border-radius: 8px;
             font-size: 1rem;
-            margin-top: 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
             text-decoration: none;
-            display: inline-block;
+        }
+        section.features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: #ffffff;
+        }
+        .feature {
+            background: #f2f6fa;
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 300px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.03);
+            transition: transform 0.2s;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
         }
         footer {
             text-align: center;
             padding: 2rem;
-            background: #eee;
+            background: #eef1f4;
             font-size: 0.9rem;
             color: #666;
         }
@@ -69,25 +95,41 @@
 </head>
 <body>
 
-    <header>
-        <img src="logo.png" alt="StackPress Logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="best-apps.html">Apps</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About</a>
-        </nav>
-    </header>
+<header>
+    <img src="logo.png" alt="StackPress Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="best-apps.html">Apps</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <section class="hero">
-        <h1>Automate Your Budget. Own Your Future.</h1>
-        <p>Explore the smartest budgeting apps of 2025. Whether you're saving, spending, or investing — StackPress Labs helps you take control of your money with simple, AI-optimized tools.</p>
-        <a href="best-apps.html" class="cta-btn">Explore Budgeting Tools</a>
-    </section>
+<section class="hero">
+    <h1>Smarter Budgeting Starts Here</h1>
+    <p>Discover top-rated budgeting apps, learn practical money strategies, and take control of your finances with StackPress Labs.</p>
+    <a href="best-apps.html" class="cta-btn">See Our Top Picks</a>
+</section>
 
-    <footer>
-        &copy; 2025 StackPress Labs. Built with love and AI. All rights reserved.
-    </footer>
+<section class="features">
+    <div class="feature">
+        <h2>Expert Reviews</h2>
+        <p>We test and compare the best budgeting tools so you don’t have to guess.</p>
+    </div>
+    <div class="feature">
+        <h2>Real-World Tips</h2>
+        <p>From saving more to spending less, our blog helps you make smarter money moves.</p>
+    </div>
+    <div class="feature">
+        <h2>Built with AI</h2>
+        <p>All our content is generated, tested, and improved using the latest AI tools.</p>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 StackPress Labs. Built with strategy, speed, and systems. All rights reserved.
+</footer>
 
 </body>
 </html>
